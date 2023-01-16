@@ -6,7 +6,7 @@ import Footer from '../footer/Footer'
 function Home() {
     return (
         <div className="">
-            <div className=" w-full ">
+            <div className="fixed z-10 w-full ">
                 <Navbar />
             </div>
             <Body />
