@@ -1,6 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 export const Navbar = () => {
+
     return (
         <div className="flex w-full bg-white justify-between px-10">
             <a href="/" className="flex items-center">
@@ -9,19 +12,23 @@ export const Navbar = () => {
             </a>
             <nav className="flex items-center">
                 <div>
-                    <a href="/datafriends" className="mr-5 text-sm font-semibold text-blue-400  rounded-xl hover:text-gray-800">
+                    <a href="/Home" className="mr-5 text-sm font-semibold text-blue-400  rounded-xl hover:text-blue-500">
                         Home
                     </a>
-                    <a href="/laporan" className="mr-5 text-sm font-semibold text-blue-400 rounded-xl hover:text-gray-800">
+                    <a href="/Job" className="mr-5 text-sm font-semibold text-blue-400 rounded-xl hover:text-blue-500">
                         Job Vacancies
                     </a>
-                    <a href="javascript.void(0)" className="mr-5 text-sm font-semibold text-blue-400 rounded-xl hover:text-gray-800">
+                    <a href="FAQ" className="mr-5 text-sm font-semibold text-blue-400 rounded-xl hover:text-blue-500">
                         FAQ
                     </a>
                 </div>
                 <div className="border-l-2 px-5">
-                    <button className="mr-5 text-blue-400">Sign In</button>
-                    {/* <button>Register</button> */}
+                    <Link to="/Login">
+                        <button className="mr-5 text-blue-400 rounded-xl hover:text-blue-500">Sign In</button>
+                    </Link>
+                    <Link to="/Register">
+                        <button className="mr-5 text-blue-400 rounded-xl hover:text-blue-500">Register</button>
+                    </Link>
                 </div>
             </nav>
         </div>
